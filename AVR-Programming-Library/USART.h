@@ -4,13 +4,13 @@
      the bit-rate multiplier.
  */
 
-#ifndef BAUD                          /* if not defined in Makefile... */
-#define BAUD  9600                     /* set a safe default baud rate */
-#endif
+//ifndef BAUD                          /* if not defined in Makefile... */
+//define BAUD  9600                     /* set a safe default baud rate */
+//endif
 
                                   /* These are defined for convenience */
-#define   USART_HAS_DATA   bit_is_set(UCSR0A, RXC0)
-#define   USART_READY      bit_is_set(UCSR0A, UDRE0)
+//define   USART_HAS_DATA   bit_is_set(UCSR0A, RXC0)
+//define   USART_READY      bit_is_set(UCSR0A, UDRE0)
 
 /* Takes the defined BAUD and F_CPU,
    calculates the bit-clock multiplier,

@@ -3,8 +3,9 @@
 /* You can totally get by without these, but why? */
 
 /* Make sure we've already got io / sfr / pindefs loaded */
-#ifndef   _AVR_IO_H_
-#include  <avr/io.h>
+#ifndef   _AVR_IOM8_H_
+#include  <avr/iom8.h>
+#include <avr/io.h>
 #endif
 
 /* Reminder: the following useful bit-twiddling macros are

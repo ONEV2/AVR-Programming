@@ -8,13 +8,13 @@ import serial
 
 def playString(noteString, serialPort):
   for letter in noteString:
-    print letter
+    print (letter)
     serialPort.write(letter)
     returnValue = serialPort.read(1)
     
 if __name__ == "__main__":
 
-  import time, urllib2
+  import time, urllib3
 
   ## Need to consider alternatives for Mac / Windows
   PORT = "/dev/ttyUSB0"

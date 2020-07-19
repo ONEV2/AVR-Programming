@@ -4,7 +4,7 @@
 ##########    Check these every time you start a new project    ##########
 ##########------------------------------------------------------##########
 
-MCU   = atmega168p
+MCU   = atmega8
 F_CPU = 1000000UL  
 BAUD  = 9600UL
 ## Also try BAUD = 19200 or 38400 if you're feeling lucky.
@@ -12,7 +12,7 @@ BAUD  = 9600UL
 ## A directory for common include files and the simple USART library.
 ## If you move either the current folder or the Library folder, you'll 
 ##  need to change this path to match.
-LIBDIR = ../../AVR-Programming-Library
+LIBDIR = /home/prakhar/Desktop/make_avr_github/AVR-Programming-Library
 
 ##########------------------------------------------------------##########
 ##########                 Programmer Defaults                  ##########
@@ -20,9 +20,9 @@ LIBDIR = ../../AVR-Programming-Library
 ##########        (Can override.  See bottom of file.)          ##########
 ##########------------------------------------------------------##########
 
-PROGRAMMER_TYPE = usbtiny
+PROGRAMMER_TYPE = avrisp
 # extra arguments to avrdude: baud rate, chip type, -F flag, etc.
-PROGRAMMER_ARGS = 	
+PROGRAMMER_ARGS = -b 19200 -P /dev/ttyUSB0
 
 ##########------------------------------------------------------##########
 ##########                  Program Locations                   ##########
@@ -45,7 +45,7 @@ AVRDUDE = avrdude
 ##########------------------------------------------------------##########
 
 ## The name of your project (without the .c)
-# TARGET = blinkLED
+ TARGET = serialOrgan
 ## Or name it automatically after the enclosing directory
 TARGET = $(lastword $(subst /, ,$(CURDIR)))
 
@@ -150,7 +150,7 @@ flash_usbasp: PROGRAMMER_ARGS =  # USBasp works with no further arguments
 flash_usbasp: flash
 
 flash_arduinoISP: PROGRAMMER_TYPE = avrisp
-flash_arduinoISP: PROGRAMMER_ARGS = -b 19200 -P /dev/ttyACM0 
+flash_arduinoISP: PROGRAMMER_ARGS = -b 19200 -P /dev/ttyUSB0
 ## (for windows) flash_arduinoISP: PROGRAMMER_ARGS = -b 19200 -P com5
 flash_arduinoISP: flash
 

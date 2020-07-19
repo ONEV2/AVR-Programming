@@ -12,7 +12,7 @@ BAUD  = 9600UL
 ## A directory for common include files and the simple USART library.
 ## If you move either the current folder or the Library folder, you'll 
 ##  need to change this path to match.
-LIBDIR = /home/prakhar/Desktop/make_avr_github/AVR-Programming-Library
+LIBDIR = /home/prakhar/Desktop/AVR-Programming-Library
 
 ##########------------------------------------------------------##########
 ##########                 Programmer Defaults                  ##########
@@ -22,7 +22,7 @@ LIBDIR = /home/prakhar/Desktop/make_avr_github/AVR-Programming-Library
 
 PROGRAMMER_TYPE = avrisp
 # extra arguments to avrdude: baud rate, chip type, -F flag, etc.
-PROGRAMMER_ARGS = -b 19200 -P /dev/ttyUSB0
+PROGRAMMER_ARGS = -b 19200 -p m8 -P /dev/ttyUSB0
 
 ##########------------------------------------------------------##########
 ##########                  Program Locations                   ##########

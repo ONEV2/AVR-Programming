@@ -11,6 +11,7 @@ See organ.c (and include it in the Makefile) for playNote() and rest()
 
 // ------- Preamble -------- //
 #include <avr/io.h>
+#include <avr/iom8.h>
 #include <util/delay.h>
 #include "organ.h"
 #include "scale16.h"
